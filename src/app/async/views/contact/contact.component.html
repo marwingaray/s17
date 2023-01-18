@@ -1,0 +1,83 @@
+<!-- <section>
+    <form>
+        <section>
+            <label for="">Nombre</label>
+            <input type="text" name="name" class="form-control-sm">
+        </section>
+        <section>
+            <label for="">Correo</label>
+            <input type="text" name="email" class="form-control-sm">
+        </section>
+        <section>
+            <label for="">Telefono</label>
+            <input type="text" name="phone" class="form-control-sm">
+        </section>
+        <section>
+            <label for="">Pais</label>
+            <input type="text" name="country" class="form-control-sm">
+        </section>
+        <section>
+            <label for="">Mensaje</label>
+            <textarea type="text" name="message"></textarea>
+        </section>
+        <form>
+        </form>
+        <section class="">
+            <input type="submit" name="submit" value="Registrar" id="">
+        </section>
+    </form>
+</section> -->
+
+<section class="mx-5">
+    <h1 class="color text-center">Formulario de Registro</h1>
+    <form class="form-group px-5 py-2 border mx-auto">
+        <label for="" class="m-2">Nombre:</label>
+        <input type="text" name="nombre" [(ngModel)]="n" class="form-control">
+        <label for="" class="m-2">Correo:</label>
+        <input type="text" name="correo" [(ngModel)]="c" class="form-control">
+        <label for="" class="m-2">Telefono:</label>
+        <input type="text" name="telefono" [(ngModel)]="t" class="form-control">
+
+        <label for="pais" class="m-2">Pais:</label>
+        <select name="pais" id="pais" [(ngModel)]="p" class="form-control">
+            <option value="Peru">Peru</option>
+            <option value="Ecuador">Ecuador</option>
+            <option value="Chile">Chile</option>
+            <option value="Brasil">Brasil</option>
+        </select>
+        <!-- <input type="text" name="pais" [(ngModel)]="p" class="form-control"> -->
+
+        <label for="" class="m-2">Mensaje:</label>
+        <input type="text" name="mensaje" [(ngModel)]="m" class="form-control">
+        <section class="boton">
+            <input type="button" value="Guardar" (click)="Agregar()" class="btn btn-primary my-5">
+        </section>
+    </form>
+</section>
+<!-- <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Nro</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Telefono</th>
+                <th>Pais</th>
+                <th>Mensaje</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of datos1; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{row.Nombre}}</td>
+                <td>{{row.Correo}}</td>
+                <td>{{row.Telefono}}</td>
+                <td>{{row.Pais}}</td>
+                <td>{{row.Mensaje}}</td>
+                <td>
+                    
+                    <button class="btn btn-danger" value={{i}} (click)="Eliminar(i)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table> -->

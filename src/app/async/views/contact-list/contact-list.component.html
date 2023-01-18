@@ -1,0 +1,50 @@
+<section>
+
+    <!-- <app-contact (listaContactos)="recibir($event)" ></app-contact> -->
+    <!-- <p>{{ datos1 }}</p> -->
+    <h3>Lista</h3>
+    <section>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nro</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Telefono</th>
+                    <th>Pais</th>
+                    <th>Mensaje</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let val of lista; let i=index">
+                    <td>{{i+1}}</td>
+                    <td>{{ val.Nombre }}</td>
+                    <td>{{ val.Correo }}</td>
+                    <td>{{ val.Telefono }}</td>
+                    <td>{{ val.Pais }}</td>
+                    <td>{{ val.Mensaje }}</td>
+                    <td><button class="btn btn-danger" value={{i}}>Eliminar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <section class="form mx-auto border p-4" >
+            <label for="">Seleccione pais para filtrar</label>
+            <select name="listaPaices" class="form-select" #country name="country" [ngModel]="country">
+                <option value="Peru">Peru</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="Chile">Chile</option>
+                <option value="Brasil">Brasil</option>
+            </select>
+            <br>
+            <!-- <p>pais: {{country.value}}</p> -->
+            <br>
+            <a class="btn btn-warning" [routerLink]="['/contacto-info', country.value]">Filtrar  {{' por: '+country.value}}</a>
+            <!-- <a href="/contacto-info/{{country}}">Filtrar</a>
+            <button (click)="filterByCountry()">Ir</button> -->
+        </section>
+    </section>
+    <!-- <h1>{{lista | json}}</h1> -->
+</section>
